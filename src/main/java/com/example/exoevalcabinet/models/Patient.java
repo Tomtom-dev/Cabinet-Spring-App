@@ -4,7 +4,8 @@ import com.example.exoevalcabinet.models.enums.Type;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Timestamp;
+
 
 @Data
 @Entity
@@ -22,7 +23,7 @@ public class Patient {
     private String prenom;
 
     @Column(name = "date_de_naissance")
-    private Date date_de_naissance;
+    private Timestamp date_de_naissance;
 
     @Column(name = "sexe")
     @Enumerated(EnumType.STRING)
@@ -30,4 +31,8 @@ public class Patient {
 
     @Column(name ="numero_securite_sociale")
     private Long numero_securite_sociale;
+
+    @OneToOne
+    @JoinColumn(name = "infirmier_id", referencedColumnName = "id")
+    private Infirmiere infirmiere;
 }

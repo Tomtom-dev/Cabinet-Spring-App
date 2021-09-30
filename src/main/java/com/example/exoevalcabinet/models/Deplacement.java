@@ -3,6 +3,7 @@ package com.example.exoevalcabinet.models;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 
 
@@ -18,8 +19,10 @@ public class Deplacement {
     private long id;
 
     @Column(name = "date")
-    private Date date;
+    private Timestamp date;
 
     @Column(name = "cout")
     private double cout;
+
+
 }

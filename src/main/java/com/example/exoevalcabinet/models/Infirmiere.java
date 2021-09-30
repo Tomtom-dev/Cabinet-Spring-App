@@ -1,9 +1,7 @@
 package com.example.exoevalcabinet.models;
-
-
 import lombok.Data;
-
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -28,4 +26,8 @@ public class Infirmiere {
 
     @Column(name="tel_perso")
     private String tel_perso;
+
+    @OneToMany
+    @JoinColumn(name = "patient_id", nullable = false)
+    private List<Patient> patient;
 }
