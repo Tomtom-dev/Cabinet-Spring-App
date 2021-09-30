@@ -38,7 +38,7 @@ public class PatientController {
     }
 
     @PutMapping("")
-    public Patient putUser(@RequestBody Patient patient) {
+    public Patient put(@RequestBody Patient patient) {
         return this.patientService.put(patient);
     }
 
