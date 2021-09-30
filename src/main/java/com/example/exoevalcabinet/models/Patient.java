@@ -1,8 +1,10 @@
 package com.example.exoevalcabinet.models;
 
+import com.example.exoevalcabinet.models.enums.Type;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -13,16 +15,19 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "numero")
-    private String numero;
+    @Column(name = "nom")
+    private String nom;
 
-    @Column(name = "rue")
-    private String rue;
+    @Column(name = "prenom")
+    private String prenom;
 
-    @Column(name = "cp")
-    private String cp;
+    @Column(name = "date_de_naissance")
+    private Date date_de_naissance;
 
-    @Column(name = "ville")
-    private String ville;
+    @Column(name = "sexe")
+    @Enumerated(EnumType.STRING)
+    private Type sexe;
 
+    @Column(name ="numero_securite_sociale")
+    private Long numero_securite_sociale;
 }
