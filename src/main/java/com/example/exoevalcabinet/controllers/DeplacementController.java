@@ -1,11 +1,11 @@
 package com.example.exoevalcabinet.controllers;
 
 import com.example.exoevalcabinet.models.Deplacement;
-import com.example.exoevalcabinet.models.Infirmiere;
 import com.example.exoevalcabinet.services.DeplacementService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin
@@ -24,8 +24,8 @@ public class DeplacementController {
     }
 
     @GetMapping("{id}")
-    public Deplacement FindOneById(@PathVariable Long id){
-        return this.deplacementService.FindOneById(id)
+    public Optional<Deplacement> FindOneById(@PathVariable Long id){
+        return this.deplacementService.FindOneById(id);
     }
 
     @PostMapping("")
