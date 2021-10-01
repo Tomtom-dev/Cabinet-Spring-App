@@ -27,9 +27,6 @@ public class Infirmiere {
     @Column(name="tel_perso")
     private String tel_perso;
 
-//    @OneToMany
-//    private List<Patient> patient;
-
     @ManyToOne
     private Adresse adresse;
 }

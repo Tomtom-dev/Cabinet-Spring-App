@@ -10,11 +10,13 @@ public interface InfirmiereService {
 
     List<Infirmiere> findAll();
 
-    Optional<Infirmiere> findOneById(Long id);
+    Optional<Infirmiere> findOneById(Integer id);
 
     Infirmiere create(Infirmiere infirmiere);
 
     Infirmiere put(Infirmiere infirmiere);
 
-    void delete(Long id);
+    void delete(Integer id);
+
+    List<Patient> findByInfirmiereId(Integer id);
 }

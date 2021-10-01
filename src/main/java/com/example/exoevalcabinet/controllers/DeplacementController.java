@@ -24,7 +24,7 @@ public class DeplacementController {
     }
 
     @GetMapping("{id}")
-    public Optional<Deplacement> FindOneById(@PathVariable Long id){
+    public Optional<Deplacement> FindOneById(@PathVariable Integer id){
         return this.deplacementService.FindOneById(id);
     }
 
@@ -39,7 +39,7 @@ public class DeplacementController {
     }
 
     @DeleteMapping("{id}")
-    public void delete(@PathVariable Long id){
+    public void delete(@PathVariable Integer id){
         this.deplacementService.delete(id);
     }
 }

@@ -21,7 +21,7 @@ public class DeplacementServiceImpl implements DeplacementService {
     }
 
     @Override
-    public Optional<Deplacement> FindOneById(Long id) {
+    public Optional<Deplacement> FindOneById(Integer id) {
         return this.deplacementRepository.findById(id);
     }
 
@@ -36,7 +36,7 @@ public class DeplacementServiceImpl implements DeplacementService {
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         this.deplacementRepository.deleteById(id);
     }
 }

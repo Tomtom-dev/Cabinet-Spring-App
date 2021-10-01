@@ -28,7 +28,7 @@ public class PatientController {
     }
 
     @GetMapping("{id}")
-    public Optional<Patient> findOneById(@PathVariable Long id){
+    public Optional<Patient> findOneById(@PathVariable Integer id){
         return this.patientService.findOneById(id);
     }
 
@@ -43,7 +43,7 @@ public class PatientController {
     }
 
     @DeleteMapping("{id}")
-    public void delete(@PathVariable Long id){
+    public void delete(@PathVariable Integer id){
         this.patientService.delete(id);
     }
 
