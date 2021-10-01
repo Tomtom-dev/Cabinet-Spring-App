@@ -12,17 +12,22 @@ import java.util.Date;
 @Table(name = "deplacement")
 public class Deplacement {
 
-    // id, date, cout
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(name = "date")
     private Timestamp date;
 
     @Column(name = "cout")
     private double cout;
+
+    @ManyToOne
+    private Patient patient;
+
+    @ManyToOne
+    private Infirmiere infirmiere;
 
 
 }

@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin
-@RequestMapping("patient")
+@RequestMapping("patients")
 public class PatientController {
 
     private static Logger LOGGER = LoggerFactory.getLogger(PatientController.class);

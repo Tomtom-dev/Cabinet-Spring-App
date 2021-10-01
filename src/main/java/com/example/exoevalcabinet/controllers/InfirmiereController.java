@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin
-@RequestMapping("infirmiere")
+@RequestMapping("infirmieres")
 public class InfirmiereController {
 
     private InfirmiereService infirmiereService;

@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin
-@RequestMapping("deplacement")
+@RequestMapping("deplacements")
 public class DeplacementController {
 
     private DeplacementService deplacementService;
