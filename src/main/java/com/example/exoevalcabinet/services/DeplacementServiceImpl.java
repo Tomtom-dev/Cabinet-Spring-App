@@ -21,7 +21,7 @@ public class DeplacementServiceImpl implements DeplacementService {
     }
 
     @Override
-    public Optional<Deplacement> findOnePatientById(Long id) {
+    public Optional<Deplacement> FindOneById(Long id) {
         return this.deplacementRepository.findById(id);
     }
 

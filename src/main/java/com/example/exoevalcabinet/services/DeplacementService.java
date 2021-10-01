@@ -9,7 +9,7 @@ public interface DeplacementService {
 
     List<Deplacement> findAll();
 
-    Optional<Deplacement> findOnePatientById(Long id);
+    Optional<Deplacement> FindOneById(Long id);
 
     Deplacement create(Deplacement deplacement);
 
