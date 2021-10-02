@@ -9,11 +9,11 @@ import java.util.List;
 public class Infirmiere {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(name = "numero_professionnel")
-    private Long numero_professionnel;
+    private Integer numero_professionnel;
 
     @Column(name = "nom")
     private String nom;
@@ -27,7 +27,6 @@ public class Infirmiere {
     @Column(name="tel_perso")
     private String tel_perso;
 
-    @OneToMany
-    @JoinColumn(name = "patient_id", nullable = false)
-    private List<Patient> patient;
+    @ManyToOne
+    private Adresse adresse;
 }

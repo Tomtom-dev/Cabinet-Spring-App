@@ -6,15 +6,12 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "adresse",
-uniqueConstraints = {
-        @UniqueConstraint(name = "adresse_unique", columnNames = "numero")
-})
+@Table(name = "adresse")
 public class Adresse {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(name ="numero")
     private String numero;

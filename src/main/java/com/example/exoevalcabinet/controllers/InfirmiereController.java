@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin
-@RequestMapping("infirmiere")
+@RequestMapping("infirmieres")
 public class InfirmiereController {
 
     private InfirmiereService infirmiereService;
@@ -24,7 +24,7 @@ public class InfirmiereController {
     }
 
     @GetMapping("{id}")
-    public Optional<Infirmiere> FindOneById(@PathVariable Long id){
+    public Optional<Infirmiere> FindOneById(@PathVariable Integer id){
         return this.infirmiereService.findOneById(id);
     }
 
@@ -39,7 +39,13 @@ public class InfirmiereController {
     }
 
     @DeleteMapping("{id}")
-    public void delete(@PathVariable Long id){
+    public void delete(@PathVariable int id){
         this.infirmiereService.delete(id);
     }
+
+    @GetMapping("{id}/patients")
+    public void findByInfirmiereId(@PathVariable int id) {
+         this.infirmiereService.findByInfirmiereId(id);
+    }
+
 }

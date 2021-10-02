@@ -9,11 +9,11 @@ public interface PatientService {
 
     List<Patient> findAll();
 
-    Optional<Patient> findOneById(Long id);
+    Optional<Patient> findOneById(Integer id);
 
     Patient create(Patient patient);
 
     Patient put(Patient patient);
 
-    void delete(Long id);
+    void delete(Integer id);
 }

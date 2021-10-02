@@ -9,11 +9,11 @@ public interface DeplacementService {
 
     List<Deplacement> findAll();
 
-    Optional<Deplacement> FindOneById(Long id);
+    Optional<Deplacement> FindOneById(Integer id);
 
     Deplacement create(Deplacement deplacement);
 
     Deplacement put(Deplacement deplacement);
 
-    void delete(Long id);
+    void delete(Integer id);
 }

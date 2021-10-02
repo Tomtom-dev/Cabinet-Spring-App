@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Date;
 
 
 @Data
@@ -13,8 +14,8 @@ import java.sql.Timestamp;
 public class Patient {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(name = "nom")
     private String nom;
@@ -23,9 +24,9 @@ public class Patient {
     private String prenom;
 
     @Column(name = "date_de_naissance")
-    private Timestamp date_de_naissance;
+    private Date date_de_naissance;
 
-    @Column(name = "sexe")
+    @Column(name = "sexe", columnDefinition="ENUM('Homme','Femme', 'Autre')")
     @Enumerated(EnumType.STRING)
     private Type sexe;
 
@@ -33,6 +34,5 @@ public class Patient {
     private Long numero_securite_sociale;
 
     @OneToOne
-    @JoinColumn(name = "infirmier_id", referencedColumnName = "id")
     private Infirmiere infirmiere;
 }
